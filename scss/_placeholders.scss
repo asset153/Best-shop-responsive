@@ -1,0 +1,9 @@
+%normalize-btn {
+  width: calc(100% - 5rem);
+  display: block;
+  border: none;
+  border-radius: 40px;
+  padding: 1.5rem 0;
+  background-color: $primary-color;
+  cursor: pointer;
+}
