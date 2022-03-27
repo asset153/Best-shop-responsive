@@ -1,0 +1,30 @@
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin container() {
+  max-width: 1352px;
+  margin: 0 auto;
+  @content;
+}
+
+@mixin choose-your-font(
+  $font-family,
+  $font-weight: 400,
+  $font-size: 1rem,
+  $color: black
+) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin display-flex($direction: row, $justify: normal, $align: normal) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
