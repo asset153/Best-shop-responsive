@@ -1,0 +1,55 @@
+@use "sass:list";
+
+$list-of-colors: ($color-redish, $primary-color, $color-green);
+
+.popular-sales {
+  padding: 5rem 3.6rem;
+  > h2 {
+    text-align: center;
+    @include choose-your-font($font-raleway, 400, 3rem, $color-black);
+  }
+
+  > .popular-sales__container-items {
+    min-height: 600px;
+    width: 100%;
+    @include display-flex(column);
+
+    > .popular-sales__container-items--item {
+      @include display-flex(column, center, center);
+      flex-grow: 1;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          > .popular-sales__container-items--item__circle {
+            background-color: list.nth($list-of-colors, $i);
+          }
+        }
+      }
+
+      > .popular-sales__container-items--item__circle {
+        width: 63px;
+        height: 63px;
+        position: relative;
+        @include display-flex(row, center, center);
+        border-radius: 50%;
+
+        > img {
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+        }
+      }
+
+      > span {
+        padding: 1.5rem 0;
+        @include choose-your-font($font-raleway, 800, 2rem, $color-black);
+      }
+
+      > p {
+        text-align: center;
+        @include choose-your-font($font-raleway, 400, 1.7rem, $color-grey);
+      }
+    }
+  }
+}
