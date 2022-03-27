@@ -1,0 +1,42 @@
+.section-banner {
+  padding-top: 12.5rem;
+
+  @include tablet() {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  > h1 {
+    text-align: center;
+    @include choose-your-font($font-raleway, 400, 3.5rem, $color-black);
+
+    @include tablet() {
+      @include choose-your-font($font-raleway, 400, 4.9rem, $color-black);
+    }
+  }
+  > p {
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+    @include choose-your-font($font-open-sans, 400, 1.6rem, $color-black);
+  }
+
+  > button {
+    margin: 0 auto;
+    margin-bottom: 3.5rem;
+    @extend %normalize-btn;
+    @include choose-your-font($font-open-sans, 700, 1.6rem, $color-white);
+
+    @include tablet() {
+      width: auto;
+      padding: 1.5rem 16rem;
+      margin-bottom: 0;
+    }
+  }
+
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
