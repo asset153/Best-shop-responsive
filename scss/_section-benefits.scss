@@ -1,0 +1,192 @@
+.benefits {
+  background-color: $color-light-grey;
+  padding: 2.5rem 2.5rem;
+  .benefits__container {
+    width: 100%;
+    padding: 5rem 2.5rem;
+    margin: 5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid #e8e9ed;
+    background-color: $color-white;
+
+    @include tablet() {
+      @include container();
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 10rem 15rem;
+      margin: 5rem auto;
+    }
+
+    .benefits__container__img {
+      position: relative;
+      max-width: 225px;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      &::after {
+        position: absolute;
+        right: 5%;
+        top: -30%;
+        content: "";
+        width: 127px;
+        height: 127px;
+        display: block;
+        background-color: $color-redish;
+        transform: rotate(45deg);
+        border-radius: 45%;
+        z-index: 0;
+
+        @include tablet() {
+          min-width: 200px;
+          max-width: 600px;
+          min-height: 200px;
+          max-height: 600px;
+
+          right: 0%;
+          top: -30%;
+          border-radius: 30%;
+        }
+      }
+
+      @include tablet() {
+        max-width: 600px;
+      }
+
+      > img {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        max-width: 225px;
+
+        @include tablet() {
+          max-width: none;
+          min-width: 300px;
+        }
+      }
+    }
+
+    .benefits__container__text {
+      background-color: $color-white;
+      border-radius: 5px;
+
+      @include tablet() {
+        min-width: 250px;
+      }
+
+      > h3 {
+        padding: 2.5rem 0 3rem 0;
+        @include choose-your-font($font-raleway, 400, 3rem, black);
+
+        @include tablet() {
+          @include choose-your-font($font-raleway, 400, 3.6rem, black);
+        }
+      }
+
+      > p {
+        line-height: 1.9;
+        @include choose-your-font($font-open-sans, 400, 1.4rem, black);
+
+        @include tablet() {
+          line-height: 1.5;
+          width: 75%;
+          border-bottom: 4px solid $color-redish;
+          padding-bottom: 5rem;
+          @include choose-your-font($font-open-sans, 400, 1.6rem, black);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      flex-direction: row;
+      .benefits__container__img {
+        &::after {
+          right: 20%;
+          top: 0;
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          background-color: $primary-color;
+
+          @include tablet() {
+            min-width: 300px;
+            max-width: 600px;
+            min-height: 300px;
+            max-height: 600px;
+          }
+        }
+      }
+
+      .benefits__container__text {
+        > p {
+          @include tablet() {
+            border-bottom: 4px solid $primary-color;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+
+      @include tablet() {
+        flex-direction: row-reverse;
+        border: none;
+        margin: 0 auto;
+        height: 350px;
+      }
+
+      .benefits__container__img {
+        border-radius: 5px;
+        background-color: $color-green;
+        margin-bottom: 0;
+        margin: 0;
+        max-width: 100%;
+
+        &::after {
+          display: none;
+        }
+
+        @include tablet() {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 350px;
+        }
+      }
+
+      > img {
+        width: 100%;
+        height: auto;
+        padding-top: 5rem;
+      }
+
+      .benefits__container__text {
+        padding: 0 2.5rem;
+
+        @include tablet() {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          height: 100%;
+          margin-right: 6rem;
+        }
+
+        > p {
+          padding-bottom: 3rem;
+          @include tablet() {
+            border-bottom: 4px solid $color-green;
+          }
+        }
+      }
+    }
+  }
+}
