@@ -1,0 +1,182 @@
+.pricing {
+  padding: 5rem 2.5rem;
+  //   background-color: beige;
+  > h4 {
+    text-align: center;
+    @include choose-your-font($font-raleway, 400, 3.6rem, $color-black);
+  }
+
+  .pricing__container {
+    // background-color: pink;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet() {
+      flex-direction: row;
+    }
+
+    .pricing__container__package {
+      position: relative;
+      width: 90%;
+
+      height: 33.33%;
+      display: flex;
+      margin: 3rem 0;
+      padding: 5rem 0;
+      border-radius: 18px;
+      border: 1px solid $color-redish;
+
+      @include tablet() {
+        height: 461px;
+        width: 372px;
+        margin: 3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pricing__container__package__price {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: gold;
+
+        > h5 {
+          @include choose-your-font($font-raleway, 700, 2rem, $color-black);
+        }
+
+        > span {
+          @include choose-your-font(
+            $font-open-sans,
+            300,
+            4.6rem,
+            $color-redish
+          );
+        }
+
+        > p {
+          @include choose-your-font($font-raleway, 700, 1.2rem, $color-black);
+        }
+      }
+
+      .pricing__container__package__price__benefits {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        > p {
+          margin: 0.5rem 0;
+          @include choose-your-font($font-open-sans, 400, 1.4rem, $color-black);
+
+          @include tablet() {
+            text-align: center;
+          }
+
+          &::before {
+            content: url("../assets/Ckechmark-1.svg");
+            margin-right: 1rem;
+          }
+
+          &:nth-child(4),
+          &:nth-child(5) {
+            &::before {
+              content: url("../assets/Close.svg");
+            }
+          }
+        }
+      }
+
+      > button {
+        position: absolute;
+        bottom: -22.5px;
+        left: 50%;
+        transform: translateX(-50%);
+        @extend %normalize-btn;
+        @include choose-your-font($font-open-sans, 700, 1.3rem, $color-white);
+        background-color: $color-redish;
+        max-width: 150px;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        border: 1px solid $primary-color;
+        box-shadow: 5px 10px 27px #07ace629;
+
+        @include tablet() {
+          height: 500px;
+          width: 405px;
+        }
+
+        .pricing__container__package__price {
+          > span {
+            @include choose-your-font(
+              $font-open-sans,
+              300,
+              4.6rem,
+              $primary-color
+            );
+          }
+        }
+
+        .pricing__container__package__price__benefits {
+          > p {
+            &::before {
+              content: url("../assets/Ckechmark-1.svg");
+              margin-right: 1rem;
+            }
+
+            &:nth-child(5) {
+              &::before {
+                content: url("../assets/Close.svg");
+              }
+            }
+          }
+        }
+
+        > button {
+          background-color: $primary-color;
+        }
+      }
+
+      &:nth-child(3) {
+        border: 1px solid $color-green;
+
+        @include tablet() {
+        }
+
+        .pricing__container__package__price {
+          > span {
+            @include choose-your-font(
+              $font-open-sans,
+              300,
+              4.6rem,
+              $color-green
+            );
+          }
+        }
+
+        .pricing__container__package__price__benefits {
+          > p {
+            &::before {
+              content: url("../assets/Ckechmark-1.svg");
+              margin-right: 1rem;
+            }
+          }
+        }
+
+        > button {
+          background-color: $color-green;
+        }
+      }
+    }
+  }
+}
