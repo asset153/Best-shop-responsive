@@ -1,0 +1,113 @@
+.form-contact {
+  padding: 0 2.5rem;
+
+  @include tablet() {
+    display: flex;
+    @include container();
+    max-width: 1280px;
+  }
+  .form-contact__questions {
+    @include tablet() {
+      width: 50%;
+    }
+    > h5 {
+      @include choose-your-font($font-raleway, 400, 4rem, $color-black);
+    }
+
+    > p {
+      @include choose-your-font($font-open-sans, 400, 1.6rem, $color-black);
+    }
+
+    .form-contact__questions__phone-and-mail {
+      > p {
+        display: flex;
+        @include choose-your-font($font-open-sans, 400, 1.6rem, $color-grey);
+
+        &::before {
+          margin-right: 1rem;
+        }
+
+        &:first-child {
+          padding-top: 2.5rem;
+          &::before {
+            content: url("../assets/Mail\ Icon.svg");
+          }
+        }
+
+        &:last-child {
+          &::before {
+            content: url("../assets/Phone\ Icon.svg");
+          }
+        }
+      }
+    }
+  }
+
+  .form-contact__form {
+    @include tablet() {
+      width: 50%;
+    }
+    > form {
+      display: flex;
+      flex-direction: column;
+
+      > label {
+        margin: 3rem 0;
+
+        &:not(&:nth-of-type(3)) {
+          text-transform: uppercase;
+          letter-spacing: 0.33rem;
+          @include choose-your-font(
+            $font-open-sans,
+            700,
+            1.1rem,
+            $primary-color
+          );
+        }
+
+        &:nth-of-type(3) {
+          @include choose-your-font($font-open-sans, 400, 1.2rem, $color-grey);
+          display: flex;
+        }
+      }
+
+      > input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $color-grey;
+
+        &[type="submit"] {
+          @extend %normalize-btn;
+          @include choose-your-font($font-open-sans, 700, 1.3rem, $color-white);
+          max-width: 226px;
+          border: none;
+          margin-left: auto;
+          padding: 2rem 0;
+          box-shadow: 5px 10px 14px #07ace629;
+        }
+      }
+
+      input#checkbox {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+        margin-right: 0.5rem;
+        margin-top: 0.2rem;
+        border: 1px solid $color-grey;
+        border-radius: 4px;
+
+        &:checked {
+          position: relative;
+          &::after {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            content: url("../assets/Checkmark.svg");
+          }
+        }
+      }
+    }
+  }
+}
