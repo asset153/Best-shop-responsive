@@ -2,7 +2,6 @@
   padding-top: 12.5rem;
 
   @include tablet() {
-    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     overflow: hidden;
