@@ -29,9 +29,10 @@ header {
 
         &:checked {
           ~ ul {
+            background-color: white;
             width: 100%;
             @include display-flex(column, space-between, center);
-            position: fixed;
+            position: absolute;
             top: calc(0% + 70px);
             left: 0;
             padding: 4rem 0;
