@@ -3,18 +3,15 @@ footer {
   background-color: $color-light-grey;
   box-shadow: 0px -5px 40px #00000029;
   .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2.5rem;
     min-height: 90px;
+    @include display-flex(row, space-between, center);
+    padding: 0 2.5rem;
 
     @include tablet() {
       @include container();
     }
     > .footer__container__copyright {
-      display: flex;
-      flex-direction: column;
+      @include display-flex(column);
       > a {
         @include choose-your-font($font-raleway, 300, 3.2rem, $primary-color);
       }

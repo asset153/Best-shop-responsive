@@ -797,11 +797,12 @@ footer {
   box-shadow: 0px -5px 40px #00000029;
 }
 footer .footer__container {
+  min-height: 90px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
-  min-height: 90px;
 }
 @media screen and (min-width: 768px) {
   footer .footer__container {
@@ -812,6 +813,8 @@ footer .footer__container {
 footer .footer__container > .footer__container__copyright {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
 }
 footer .footer__container > .footer__container__copyright > a {
   font-family: "Raleway", sans-serif;
