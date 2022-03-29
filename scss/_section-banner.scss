@@ -2,8 +2,7 @@
   padding-top: 12.5rem;
 
   @include tablet() {
-    display: flex;
-    flex-direction: column;
+    @include display-flex(column);
     overflow: hidden;
   }
 
@@ -16,8 +15,8 @@
     }
   }
   > p {
-    text-align: center;
     padding: 2rem 0 4rem 0;
+    text-align: center;
     @include choose-your-font($font-open-sans, 400, 1.6rem, $color-black);
   }
 
