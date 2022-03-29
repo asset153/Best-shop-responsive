@@ -578,10 +578,13 @@ header .container nav ul > li > a:hover {
   }
 }
 .pricing .pricing__container .pricing__container__package {
-  position: relative;
   width: 90%;
   height: 33.33%;
   display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  position: relative;
   margin: 3rem 0;
   padding: 5rem 0;
   border-radius: 18px;
@@ -592,9 +595,10 @@ header .container nav ul > li > a:hover {
     height: 461px;
     width: 372px;
     margin: 3rem;
+    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 }
 .pricing .pricing__container .pricing__container__package .pricing__container__package__price {
@@ -628,6 +632,7 @@ header .container nav ul > li > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: normal;
 }
 .pricing .pricing__container .pricing__container__package .pricing__container__package__price__benefits > p {
   margin: 0.5rem 0;
@@ -649,6 +654,7 @@ header .container nav ul > li > a:hover {
   content: url("../assets/Close.svg");
 }
 .pricing .pricing__container .pricing__container__package > button {
+  max-width: 150px;
   position: absolute;
   bottom: -22.5px;
   left: 50%;
@@ -658,7 +664,6 @@ header .container nav ul > li > a:hover {
   font-size: 1.3rem;
   color: #ffffff;
   background-color: #fb3b64;
-  max-width: 150px;
 }
 .pricing .pricing__container .pricing__container__package:nth-child(2) {
   width: 100%;
