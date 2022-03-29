@@ -684,6 +684,9 @@ header .container nav ul > li > a:hover {
 @media screen and (min-width: 768px) {
   .form-contact {
     display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
     max-width: 1352px;
     margin: 0 auto;
     max-width: 1280px;
@@ -708,6 +711,9 @@ header .container nav ul > li > a:hover {
 }
 .form-contact .form-contact__questions .form-contact__questions__phone-and-mail > p {
   display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -733,6 +739,8 @@ header .container nav ul > li > a:hover {
 .form-contact .form-contact__form > form {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
 }
 .form-contact .form-contact__form > form > label {
   margin: 3rem 0;
@@ -751,6 +759,9 @@ header .container nav ul > li > a:hover {
   font-size: 1.2rem;
   color: #a5a5a5;
   display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
 }
 .form-contact .form-contact__form > form > input {
   outline: none;
@@ -758,14 +769,14 @@ header .container nav ul > li > a:hover {
   border-bottom: 1px solid #a5a5a5;
 }
 .form-contact .form-contact__form > form > input[type=submit] {
+  max-width: 226px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   color: #ffffff;
-  max-width: 226px;
-  border: none;
   margin-left: auto;
   padding: 2rem 0;
+  border: none;
   box-shadow: 5px 10px 14px #07ace629;
 }
 .form-contact .form-contact__form > form input#checkbox {
