@@ -301,8 +301,8 @@ header .container nav ul > li > a:hover {
 }
 @media screen and (min-width: 768px) {
   .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item {
-    padding: 0;
     max-width: 400px;
+    padding: 0;
   }
 }
 .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item:nth-child(1) > .popular-sales__container-items--item__circle {
@@ -317,18 +317,18 @@ header .container nav ul > li > a:hover {
 .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item > .popular-sales__container-items--item__circle {
   width: 63px;
   height: 63px;
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
   border-radius: 50%;
 }
 .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item > .popular-sales__container-items--item__circle > img {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%);
-  position: absolute;
 }
 .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item > span {
   padding: 1.5rem 0;
