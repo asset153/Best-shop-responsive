@@ -1,36 +1,38 @@
 .benefits {
+  padding: 5rem 2.5rem;
   background-color: $color-light-grey;
-  padding: 2.5rem 2.5rem;
+
+  @include tablet() {
+    padding: 7.5rem 2.5rem;
+  }
   .benefits__container {
     width: 100%;
     padding: 5rem 2.5rem;
-    margin: 5rem 0;
+    margin-bottom: 2.5rem;
     border-radius: 0.5rem;
     border: 1px solid #e8e9ed;
     background-color: $color-white;
 
     @include tablet() {
       @include container();
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
+      @include display-flex(row-reverse, normal, center);
       padding: 10rem 15rem;
-      margin: 5rem auto;
+      margin: 2.5rem auto;
     }
 
     .benefits__container__img {
-      position: relative;
       max-width: 225px;
-      margin: 0 auto;
+      position: relative;
       top: 0;
       left: 0;
+      margin: 0 auto;
       &::after {
-        position: absolute;
-        right: 5%;
-        top: -30%;
         content: "";
         width: 127px;
         height: 127px;
+        position: absolute;
+        right: 5%;
+        top: -30%;
         display: block;
         background-color: $color-redish;
         transform: rotate(45deg);
@@ -42,7 +44,6 @@
           max-width: 600px;
           min-height: 200px;
           max-height: 600px;
-
           right: 0%;
           top: -30%;
           border-radius: 30%;
@@ -91,10 +92,10 @@
         @include choose-your-font($font-open-sans, 400, 1.4rem, black);
 
         @include tablet() {
-          line-height: 1.5;
           width: 75%;
-          border-bottom: 4px solid $color-redish;
           padding-bottom: 5rem;
+          line-height: 1.5;
+          border-bottom: 4px solid $color-redish;
           @include choose-your-font($font-open-sans, 400, 1.6rem, black);
         }
       }
@@ -130,8 +131,7 @@
     }
 
     &:nth-child(3) {
-      display: flex;
-      flex-direction: column-reverse;
+      @include display-flex(column-reverse);
       padding: 0;
       margin: 0;
       background-color: transparent;
@@ -139,25 +139,23 @@
       @include tablet() {
         flex-direction: row-reverse;
         border: none;
-        margin: 0 auto;
+        margin: 2.5rem auto;
         height: 350px;
       }
 
       .benefits__container__img {
-        border-radius: 5px;
-        background-color: $color-green;
+        max-width: 100%;
         margin-bottom: 0;
         margin: 0;
-        max-width: 100%;
+        border-radius: 5px;
+        background-color: $color-green;
 
         &::after {
           display: none;
         }
 
         @include tablet() {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include display-flex(row, center, center);
           height: 350px;
         }
       }
@@ -172,11 +170,8 @@
         padding: 0 2.5rem;
 
         @include tablet() {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
           height: 100%;
+          @include display-flex(column, center, flex-start);
           margin-right: 6rem;
         }
 

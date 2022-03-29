@@ -346,13 +346,18 @@ header .container nav ul > li > a:hover {
 }
 
 .benefits {
+  padding: 5rem 2.5rem;
   background-color: #f7f7f7;
-  padding: 2.5rem 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .benefits {
+    padding: 7.5rem 2.5rem;
+  }
 }
 .benefits .benefits__container {
   width: 100%;
   padding: 5rem 2.5rem;
-  margin: 5rem 0;
+  margin-bottom: 2.5rem;
   border-radius: 0.5rem;
   border: 1px solid #e8e9ed;
   background-color: #ffffff;
@@ -363,25 +368,26 @@ header .container nav ul > li > a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: normal;
     align-items: center;
     padding: 10rem 15rem;
-    margin: 5rem auto;
+    margin: 2.5rem auto;
   }
 }
 .benefits .benefits__container .benefits__container__img {
-  position: relative;
   max-width: 225px;
-  margin: 0 auto;
+  position: relative;
   top: 0;
   left: 0;
+  margin: 0 auto;
 }
 .benefits .benefits__container .benefits__container__img::after {
-  position: absolute;
-  right: 5%;
-  top: -30%;
   content: "";
   width: 127px;
   height: 127px;
+  position: absolute;
+  right: 5%;
+  top: -30%;
   display: block;
   background-color: #fb3b64;
   transform: rotate(45deg);
@@ -452,10 +458,10 @@ header .container nav ul > li > a:hover {
 }
 @media screen and (min-width: 768px) {
   .benefits .benefits__container .benefits__container__text > p {
-    line-height: 1.5;
     width: 75%;
-    border-bottom: 4px solid #fb3b64;
     padding-bottom: 5rem;
+    line-height: 1.5;
+    border-bottom: 4px solid #fb3b64;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
@@ -489,6 +495,8 @@ header .container nav ul > li > a:hover {
 .benefits .benefits__container:nth-child(3) {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: normal;
+  align-items: normal;
   padding: 0;
   margin: 0;
   background-color: transparent;
@@ -497,16 +505,16 @@ header .container nav ul > li > a:hover {
   .benefits .benefits__container:nth-child(3) {
     flex-direction: row-reverse;
     border: none;
-    margin: 0 auto;
+    margin: 2.5rem auto;
     height: 350px;
   }
 }
 .benefits .benefits__container:nth-child(3) .benefits__container__img {
-  border-radius: 5px;
-  background-color: #55dfb4;
+  max-width: 100%;
   margin-bottom: 0;
   margin: 0;
-  max-width: 100%;
+  border-radius: 5px;
+  background-color: #55dfb4;
 }
 .benefits .benefits__container:nth-child(3) .benefits__container__img::after {
   display: none;
@@ -514,6 +522,7 @@ header .container nav ul > li > a:hover {
 @media screen and (min-width: 768px) {
   .benefits .benefits__container:nth-child(3) .benefits__container__img {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 350px;
@@ -529,11 +538,11 @@ header .container nav ul > li > a:hover {
 }
 @media screen and (min-width: 768px) {
   .benefits .benefits__container:nth-child(3) .benefits__container__text {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 100%;
     margin-right: 6rem;
   }
 }
