@@ -39,7 +39,7 @@ header .container {
   padding: 2.5rem;
   height: 70px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container {
     max-width: 1352px;
     margin: 0 auto;
@@ -55,7 +55,7 @@ header .container > a {
 header .container nav {
   flex-grow: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav {
     height: 66px;
   }
@@ -81,7 +81,7 @@ header .container nav #hamburger-menu:checked ~ ul {
   box-shadow: 0px 3px 6px #00000029;
   background-color: white;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav #hamburger-menu:checked ~ ul {
     width: auto;
     position: static;
@@ -134,7 +134,7 @@ header .container nav label {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav label {
     display: none;
   }
@@ -147,7 +147,7 @@ header .container nav label span {
 header .container nav ul {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav ul {
     display: flex;
     flex-direction: row;
@@ -163,7 +163,7 @@ header .container nav ul > li:hover {
   border-bottom: 4px solid #08a6e4;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav ul > li {
     margin: 0 1.5rem;
   }
@@ -187,7 +187,7 @@ header .container nav ul > li > a {
 header .container nav ul > li > a:hover {
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container nav ul > li > a {
     height: 66px;
     display: flex;
@@ -200,7 +200,7 @@ header .container nav ul > li > a:hover {
 .section-banner {
   padding-top: 12.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section-banner {
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@ header .container nav ul > li > a:hover {
   font-size: 3.5rem;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section-banner > h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -240,7 +240,7 @@ header .container nav ul > li > a:hover {
   font-size: 1.6rem;
   color: #ffffff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .section-banner > button {
     width: auto;
     padding: 1.5rem 16rem;
@@ -255,7 +255,7 @@ header .container nav ul > li > a:hover {
 .popular-sales {
   padding: 5rem 3.6rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .popular-sales {
     padding: 10rem 3.6rem;
   }
@@ -267,7 +267,7 @@ header .container nav ul > li > a:hover {
   font-size: 3rem;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .popular-sales > h2 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -283,7 +283,7 @@ header .container nav ul > li > a:hover {
   justify-content: normal;
   align-items: normal;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .popular-sales > .popular-sales__container-items {
     display: flex;
     flex-direction: row;
@@ -299,7 +299,7 @@ header .container nav ul > li > a:hover {
   padding: 2.5rem 0;
   flex-grow: 1;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .popular-sales > .popular-sales__container-items > .popular-sales__container-items--item {
     max-width: 400px;
     padding: 0;
@@ -349,7 +349,7 @@ header .container nav ul > li > a:hover {
   padding: 5rem 2.5rem;
   background-color: #f7f7f7;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits {
     padding: 7.5rem 2.5rem;
   }
@@ -362,7 +362,7 @@ header .container nav ul > li > a:hover {
   border: 1px solid #e8e9ed;
   background-color: #ffffff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container {
     max-width: 1352px;
     margin: 0 auto;
@@ -394,7 +394,7 @@ header .container nav ul > li > a:hover {
   border-radius: 45%;
   z-index: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__img::after {
     min-width: 200px;
     max-width: 600px;
@@ -405,7 +405,7 @@ header .container nav ul > li > a:hover {
     border-radius: 30%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__img {
     max-width: 600px;
   }
@@ -419,7 +419,7 @@ header .container nav ul > li > a:hover {
   height: auto;
   max-width: 225px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__img > img {
     max-width: none;
     min-width: 300px;
@@ -429,7 +429,7 @@ header .container nav ul > li > a:hover {
   background-color: #ffffff;
   border-radius: 5px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__text {
     min-width: 250px;
   }
@@ -441,7 +441,7 @@ header .container nav ul > li > a:hover {
   font-size: 3rem;
   color: black;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__text > h3 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -456,7 +456,7 @@ header .container nav ul > li > a:hover {
   font-size: 1.4rem;
   color: black;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container .benefits__container__text > p {
     width: 75%;
     padding-bottom: 5rem;
@@ -479,7 +479,7 @@ header .container nav ul > li > a:hover {
   border-radius: 50%;
   background-color: #08a6e4;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(2) .benefits__container__img::after {
     min-width: 300px;
     max-width: 600px;
@@ -487,7 +487,7 @@ header .container nav ul > li > a:hover {
     max-height: 600px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(2) .benefits__container__text > p {
     border-bottom: 4px solid #08a6e4;
   }
@@ -501,7 +501,7 @@ header .container nav ul > li > a:hover {
   margin: 0;
   background-color: transparent;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(3) {
     flex-direction: row-reverse;
     border: none;
@@ -519,7 +519,7 @@ header .container nav ul > li > a:hover {
 .benefits .benefits__container:nth-child(3) .benefits__container__img::after {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(3) .benefits__container__img {
     display: flex;
     flex-direction: row;
@@ -536,7 +536,7 @@ header .container nav ul > li > a:hover {
 .benefits .benefits__container:nth-child(3) .benefits__container__text {
   padding: 0 2.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(3) .benefits__container__text {
     height: 100%;
     display: flex;
@@ -549,7 +549,7 @@ header .container nav ul > li > a:hover {
 .benefits .benefits__container:nth-child(3) .benefits__container__text > p {
   padding-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .benefits .benefits__container:nth-child(3) .benefits__container__text > p {
     border-bottom: 4px solid #55dfb4;
   }
@@ -572,7 +572,7 @@ header .container nav ul > li > a:hover {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .pricing .pricing__container {
     flex-direction: row;
   }
@@ -590,7 +590,7 @@ header .container nav ul > li > a:hover {
   border-radius: 18px;
   border: 1px solid #fb3b64;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .pricing .pricing__container .pricing__container__package {
     height: 461px;
     width: 372px;
@@ -641,7 +641,7 @@ header .container nav ul > li > a:hover {
   font-size: 1.4rem;
   color: #000000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .pricing .pricing__container .pricing__container__package .pricing__container__package__price__benefits > p {
     text-align: center;
   }
@@ -670,7 +670,7 @@ header .container nav ul > li > a:hover {
   border: 1px solid #08a6e4;
   box-shadow: 5px 10px 27px #07ace629;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .pricing .pricing__container .pricing__container__package:nth-child(2) {
     height: 500px;
     width: 405px;
@@ -712,7 +712,7 @@ header .container nav ul > li > a:hover {
 .form-contact {
   padding: 0 2.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form-contact {
     display: flex;
     flex-direction: row;
@@ -723,7 +723,7 @@ header .container nav ul > li > a:hover {
     max-width: 1280px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form-contact .form-contact__questions {
     width: 50%;
   }
@@ -762,7 +762,7 @@ header .container nav ul > li > a:hover {
 .form-contact .form-contact__questions .form-contact__questions__phone-and-mail > p:last-child::before {
   content: url("../assets/Phone Icon.svg");
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form-contact .form-contact__form {
     width: 50%;
   }
@@ -846,7 +846,7 @@ footer .footer__container {
   align-items: center;
   padding: 0 2.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   footer .footer__container {
     max-width: 1352px;
     margin: 0 auto;
