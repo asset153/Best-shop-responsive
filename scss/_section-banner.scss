@@ -6,6 +6,11 @@
     overflow: hidden;
   }
 
+  @include desktop() {
+    height: calc(100vh - 70px);
+  }
+
+
   > h1 {
     text-align: center;
     @include choose-your-font($font-raleway, 400, 3.5rem, $color-black);
