@@ -209,6 +209,11 @@ header .container nav ul > li > a:hover {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 1025px) {
+  .section-banner {
+    height: calc(100vh - 70px);
+  }
+}
 .section-banner > h1 {
   text-align: center;
   font-family: "Raleway", sans-serif;
