@@ -1,0 +1,63 @@
+section.calculator {
+  min-height: 500px;
+  background-color: $color-light-grey;
+  > .calculator__container {
+    @include tablet() {
+      @include display-flex();
+      flex-wrap: wrap;
+      @include container() {
+        max-width: 865px;
+      }
+
+    }
+
+    > h3 {
+      @include choose-your-font($font-raleway, 400, 3.6rem, $color-black);
+      text-align: center;
+      width: 100%;
+    }
+
+    > form {
+      @include choose-your-font($font-open-sans, 400, 1.3rem, $color-grey);
+      @include display-flex(column, normal, normal);
+      @include tablet() {
+        width: 50%;
+      }
+
+      > input, select {
+        @include choose-your-font($font-open-sans, 400, 1.3rem, $color-grey);
+        @extend %normalize-input;
+      }
+    }
+
+    > .calculator__container__pricing {
+      @include tablet() {
+        width: 50%;
+      }
+
+      > .calculator__container__pricing__item {
+        @include display-flex(row, space-between, center);
+        @include choose-your-font($font-open-sans, 400, 1.4rem, $color-white);
+        background-color: $color-green;
+
+        > span:nth-child(3) {
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+      }
+
+      > .calculator__container__pricing__item-totalSum {
+        width: 178px;
+        height: 38px;
+        margin-left: auto;
+        @include choose-your-font($font-open-sans, 400, 1.4rem, $color-white);
+        @include display-flex(row, space-between, center);
+        background-color: $primary-color;
+          > span:nth-child(2) {
+            text-align: end;
+            font-size: 2rem;
+          }
+      }
+    }
+  }
+}
