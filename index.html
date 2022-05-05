@@ -173,6 +173,35 @@
         </article>
     </section>
 
+    <section class="calculator">'
+        <div class="calculator__container">
+            <h3>Calculate how much you’ll pay</h3>
+            <form class="calculator__container__form">
+                <input id="productsQuantity" type="number" placeholder="Products quantity" max="100"/>
+                <input id="estimatedOrdersInMonth" type="number" placeholder="Estimated orders in month"/>
+
+                <select name="" id="package">
+                    <option value="" disabled selected hidden>Choose package</option>
+                    <option value="">Basic</option>
+                    <option value="">Professional</option>
+                    <option value="">Premium</option>
+                </select>
+
+                <div class="calculator__container__checkbox">
+                    <label for="accounting">Accounting</label>
+                    <input id="accounting" type="checkbox">
+                </div>
+
+                <div class="calculator__container__checkbox">
+                    <label for="paymentTerminal">Rental of a payment terminal</label>
+                    <input id="paymentTerminal" type="checkbox">
+                </div>
+            </form>
+
+            <div class="calculator__container__pricing"></div>
+        </div>
+    </section>
+
     <section class="form-contact">
         <div class="form-contact__questions">
             <h5>Any questions?</h5>
@@ -219,7 +248,7 @@
             </nav>
         </div>
     </footer>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

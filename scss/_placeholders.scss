@@ -8,3 +8,10 @@
   color: $color-white;
   cursor: pointer;
 }
+
+%normalize-input {
+  min-height: 4rem;
+  border-radius: 0.6rem;
+  border: 1px solid $primary-color;
+  padding: 1rem;
+}
