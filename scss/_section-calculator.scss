@@ -47,6 +47,9 @@ section.calculator {
 
       > .calculator__container__pricing__item#itemProductsQuantity {
         > span:nth-child(2) {
+          &:before {
+            content: "$";
+          }
           &:after {
             content: " * $0.5";
           }
@@ -55,6 +58,9 @@ section.calculator {
 
       > .calculator__container__pricing__item#itemEstimatedOrdersInMonth {
         > span:nth-child(2) {
+          &:before {
+            content: "$";
+          }
           &:after {
             content: " * $0.25";
           }

@@ -49,15 +49,11 @@ Calculator.prototype.calcFuncTerminal = function () {
 Calculator.prototype.checkItem = function (state, item, func) {
     if(state.length > 0) {
         item.classList.remove("d-none");
-        if(item.id === "itemProductsQuantity" || "itemEstimatedOrdersInMonth") {
-            item.children[1].innerText = `$${state}`;
-            item.children[2].innerText = `$${func}`;
-        }
-        if(item.id === "itemPackage") {
+        if(item.id === "itemProductsQuantity" || "itemEstimatedOrdersInMonth" || "itemPackage") {
             item.children[1].innerText = `${state}`;
             item.children[2].innerText = `$${func}`;
         }
-    }else if(state) {
+    } else if(state) {
         item.classList.remove("d-none");
         item.children[1].innerText = `$${func}`;
     }
@@ -68,7 +64,6 @@ Calculator.prototype.checkItem = function (state, item, func) {
 
 Calculator.prototype.createTotalSum = function (...args) {
     const total = args.reduce((prev, curr) => prev + curr);
-
     if(total > 0) {
         containerFromNewElement.children['totalSum'].classList.remove("d-none");
         containerFromNewElement.children['totalSum'].children[1].innerText = `$${Number(total).toFixed(2)}`;
@@ -80,7 +75,6 @@ Calculator.prototype.createTotalSum = function (...args) {
 const c1 = new Calculator();
 
 for(let el of form.elements) {
-
         el.addEventListener("input", function () {
             switch (el.id) {
                 case "productsQuantity":
