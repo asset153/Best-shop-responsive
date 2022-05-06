@@ -53,10 +53,15 @@ section.calculator {
         @include choose-your-font($font-open-sans, 400, 1.4rem, $color-white);
         @include display-flex(row, space-between, center);
         background-color: $primary-color;
+
           > span:nth-child(2) {
             text-align: end;
             font-size: 2rem;
           }
+      }
+
+      > .d-none {
+        display: none;
       }
     }
   }

@@ -804,6 +804,9 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   text-align: end;
   font-size: 2rem;
 }
+section.calculator > .calculator__container > .calculator__container__pricing > .d-none {
+  display: none;
+}
 
 .form-contact {
   padding: 0 2.5rem;
