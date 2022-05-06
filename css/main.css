@@ -786,6 +786,12 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   font-size: 1.8rem;
   font-weight: 600;
 }
+section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item#itemProductsQuantity > span:nth-child(2):after {
+  content: " * $0.5";
+}
+section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item#itemEstimatedOrdersInMonth > span:nth-child(2):after {
+  content: " * $0.25";
+}
 section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item-totalSum {
   width: 178px;
   height: 38px;

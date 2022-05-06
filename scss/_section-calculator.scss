@@ -8,7 +8,6 @@ section.calculator {
       @include container() {
         max-width: 865px;
       }
-
     }
 
     > h3 {
@@ -43,6 +42,22 @@ section.calculator {
         > span:nth-child(3) {
           font-size: 1.8rem;
           font-weight: 600;
+        }
+      }
+
+      > .calculator__container__pricing__item#itemProductsQuantity {
+        > span:nth-child(2) {
+          &:after {
+            content: " * $0.5";
+          }
+        }
+      }
+
+      > .calculator__container__pricing__item#itemEstimatedOrdersInMonth {
+        > span:nth-child(2) {
+          &:after {
+            content: " * $0.25";
+          }
         }
       }
 

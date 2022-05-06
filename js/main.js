@@ -15,15 +15,6 @@ const Calculator = function (productsQuantity = 0, estimatedOrdersInMonth = 0, c
         forProducts: 0.5,
         forOrders: 0.25,
     };
-
-    this.HTMLelements = {
-        divProducts: document.createElement("div"),
-        divOrders: document.createElement("div"),
-        divPackage: document.createElement("div"),
-        divAccounting: document.createElement("div"),
-        divPaymentTerminal: document.createElement("div"),
-        divTotalSum: document.createElement("div"),
-    };
 };
 
 Calculator.prototype.calcFuncQuantity = function () {
@@ -43,43 +34,48 @@ Calculator.prototype.calcFuncChoosePackage = function () {
         case "Premium":
             return 60;
         default:
-            return null;
+            return 0;
     }
 };
 
 Calculator.prototype.calcFuncAccounting = function () {
-    return this.state.accounting ? 35 : "";
+    return this.state.accounting ? 35 : 0;
 };
 
 Calculator.prototype.calcFuncTerminal = function () {
-    return this.state.terminal ? 5 : "";
+    return this.state.terminal ? 5 : 0;
 };
 
-// Calculator.prototype.createNewItemForInputNumber = function (tag, stateName, state, counter, func) {
-    // tag.classList.add("calculator__container__pricing__item");
-    // tag.innerHTML = `<span>${stateName}</span><span>${state} * $${counter}</span><span>$${func}</span>`
-    // return (state.length <= 0 || !state) ? containerFromNewElement.removeChild(tag) : containerFromNewElement.appendChild(tag);
-    // return (state.length <= 0 || !state) ? containerFromNewElement.children['totalSum'].classList.remove("d-none") : containerFromNewElement.children['totalSum'].classList.add("d-none");
-// };
-
 Calculator.prototype.checkItem = function (state, item, func) {
-    // const ifBoolean = state === true || state === false;
-    // tag.classList.add("calculator__container__pricing__item");
-    // tag.innerHTML = `<span>${stateName}</span><span>${ifBoolean ? "" : state}</span><span>$${func}</span>`
-    // return !state ? containerFromNewElement.removeChild(tag) : containerFromNewElement.appendChild(tag);
-    // return item.children[1].innerText = `${func}`;
-    return (state.length <= 0 || !state) ? item.classList.remove("d-none") : item.classList.add("d-none");
-
+    if(state.length > 0) {
+        item.classList.remove("d-none");
+        if(item.id === "itemProductsQuantity" || "itemEstimatedOrdersInMonth") {
+            item.children[1].innerText = `$${state}`;
+            item.children[2].innerText = `$${func}`;
+        }
+        if(item.id === "itemPackage") {
+            item.children[1].innerText = `${state}`;
+            item.children[2].innerText = `$${func}`;
+        }
+    }else if(state) {
+        item.classList.remove("d-none");
+        item.children[1].innerText = `$${func}`;
+    }
+    else {
+        item.classList.add("d-none");
+    }
 };
 
 Calculator.prototype.createTotalSum = function (...args) {
     const total = args.reduce((prev, curr) => prev + curr);
-    // this.HTMLelements.divTotalSum.classList.add("calculator__container__pricing__item-totalSum");
-    // this.HTMLelements.divTotalSum.innerHTML = `<span>Total</span><span>$${Number(total).toFixed(2)}</span>`
-    // return total <= 0 ? containerFromNewElement.removeChild(this.HTMLelements.divTotalSum) : containerFromNewElement.appendChild(this.HTMLelements.divTotalSum);
-    return  total <= 0 ? containerFromNewElement.children['totalSum'].classList.remove("d-none") : containerFromNewElement.children['totalSum'].classList.add("d-none");
-};
 
+    if(total > 0) {
+        containerFromNewElement.children['totalSum'].classList.remove("d-none");
+        containerFromNewElement.children['totalSum'].children[1].innerText = `$${Number(total).toFixed(2)}`;
+    } else {
+        containerFromNewElement.children['totalSum'].classList.add("d-none");
+    }
+};
 
 const c1 = new Calculator();
 
@@ -89,17 +85,15 @@ for(let el of form.elements) {
             switch (el.id) {
                 case "productsQuantity":
                     c1.state.productsQuantity = this.value;
-                    c1.checkItem(c1.state.productsQuantity, c1.counters.forProducts, c1.calcFuncQuantity());
+                    c1.checkItem(c1.state.productsQuantity, containerFromNewElement.children['itemProductsQuantity'], c1.calcFuncQuantity());
                     break;
                 case "estimatedOrdersInMonth":
                     c1.state.estimatedOrdersInMonth = this.value;
-                    c1.calcFuncOrdersInMonth();
-                    c1.checkItem(c1.state.estimatedOrdersInMonth, c1.counters.forOrders, c1.calcFuncOrdersInMonth());
+                    c1.checkItem(c1.state.estimatedOrdersInMonth, containerFromNewElement.children['itemEstimatedOrdersInMonth'], c1.calcFuncOrdersInMonth());
                     break;
                 case "package":
                     c1.state.choosePackage = this.options[this.selectedIndex].innerText;
-                    c1.calcFuncChoosePackage();
-                    c1.checkItem(c1.state.choosePackage, containerFromNewElement.children['itemPackage']);
+                    c1.checkItem(c1.state.choosePackage, containerFromNewElement.children['itemPackage'], c1.calcFuncChoosePackage());
                     break;
                 case "accounting":
                     c1.state.accounting = this.checked;
@@ -107,8 +101,7 @@ for(let el of form.elements) {
                     break;
                 case "paymentTerminal":
                     c1.state.terminal = this.checked;
-                    c1.calcFuncTerminal();
-                    c1.checkItem(c1.state.terminal, containerFromNewElement.children['itemPaymentTerminal']);
+                    c1.checkItem(c1.state.terminal, containerFromNewElement.children['itemPaymentTerminal'], c1.calcFuncTerminal());
                     break;
                 default:
                     return null;
