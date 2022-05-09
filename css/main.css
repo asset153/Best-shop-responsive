@@ -35,6 +35,30 @@ section.calculator > .calculator__container > form > input, section.calculator >
   padding: 1rem;
 }
 
+.form-contact .form-contact__form > form input#checkbox, section.calculator > .calculator__container > form > .calculator__container__checkbox > input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.form-contact .form-contact__form > form input#checkbox:checked, section.calculator > .calculator__container > form > .calculator__container__checkbox > input[type=checkbox]:checked {
+  position: relative;
+}
+.form-contact .form-contact__form > form input#checkbox:checked::after, section.calculator > .calculator__container > form > .calculator__container__checkbox > input[type=checkbox]:checked::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  content: url("../assets/Checkmark.svg");
+}
+
 header {
   box-shadow: 0px 3px 6px #00000029;
 }
@@ -722,8 +746,10 @@ header .container nav ul > li > a:hover {
 }
 
 section.calculator {
-  min-height: 500px;
   background-color: #f7f7f7;
+}
+section.calculator > .calculator__container {
+  padding: 5rem 0 10rem 0;
 }
 @media screen and (min-width: 769px) {
   section.calculator > .calculator__container {
@@ -744,6 +770,7 @@ section.calculator > .calculator__container > h3 {
   color: #000000;
   text-align: center;
   width: 100%;
+  margin-bottom: 5rem;
 }
 section.calculator > .calculator__container > form {
   font-family: "Open Sans", sans-serif;
@@ -757,7 +784,8 @@ section.calculator > .calculator__container > form {
 }
 @media screen and (min-width: 769px) {
   section.calculator > .calculator__container > form {
-    width: 50%;
+    width: calc(50% - 2.5rem);
+    margin-right: 2.5rem;
   }
 }
 section.calculator > .calculator__container > form > input, section.calculator > .calculator__container > form select {
@@ -765,10 +793,34 @@ section.calculator > .calculator__container > form > input, section.calculator >
   font-weight: 400;
   font-size: 1.3rem;
   color: #a5a5a5;
+  margin: 1rem;
+}
+@media screen and (min-width: 769px) {
+  section.calculator > .calculator__container > form > input, section.calculator > .calculator__container > form select {
+    margin: 1rem 0;
+  }
+}
+section.calculator > .calculator__container > form > .calculator__container__checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+}
+section.calculator > .calculator__container > form > .calculator__container__checkbox > label {
+  font-size: 1.2rem;
+}
+section.calculator > .calculator__container > form > .calculator__container__checkbox > input[type=checkbox] {
+  margin: 1rem;
+}
+@media screen and (min-width: 769px) {
+  section.calculator > .calculator__container > form > .calculator__container__checkbox > input[type=checkbox] {
+    margin: 1rem 1rem 1rem 0;
+  }
 }
 @media screen and (min-width: 769px) {
   section.calculator > .calculator__container > .calculator__container__pricing {
-    width: 50%;
+    width: calc(50% - 2.5rem);
+    margin-left: 2.5rem;
   }
 }
 section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item {
@@ -780,7 +832,15 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   font-weight: 400;
   font-size: 1.4rem;
   color: #ffffff;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  border-radius: 0.6rem;
   background-color: #55dfb4;
+}
+@media screen and (min-width: 769px) {
+  section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item {
+    margin: 1rem 0;
+  }
 }
 section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item > span:nth-child(3) {
   font-size: 1.8rem;
@@ -801,7 +861,6 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
 section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item-totalSum {
   width: 178px;
   height: 38px;
-  margin-left: auto;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
@@ -810,7 +869,17 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
   background-color: #08a6e4;
+}
+@media screen and (min-width: 769px) {
+  section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item-totalSum {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 section.calculator > .calculator__container > .calculator__container__pricing > .calculator__container__pricing__item-totalSum > span:nth-child(2) {
   text-align: end;
@@ -821,7 +890,7 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
 }
 
 .form-contact {
-  padding: 0 2.5rem;
+  padding: 5rem 2.5rem;
 }
 @media screen and (min-width: 769px) {
   .form-contact {
@@ -850,6 +919,11 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   font-weight: 400;
   font-size: 1.6rem;
   color: #000000;
+}
+@media screen and (min-width: 769px) {
+  .form-contact .form-contact__questions > p {
+    padding: 2rem 0;
+  }
 }
 .form-contact .form-contact__questions .form-contact__questions__phone-and-mail > p {
   display: flex;
@@ -921,29 +995,6 @@ section.calculator > .calculator__container > .calculator__container__pricing > 
   border: none;
   box-shadow: 5px 10px 14px #07ace629;
 }
-.form-contact .form-contact__form > form input#checkbox {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 24px;
-  height: 24px;
-  padding: 10px;
-  margin-right: 0.5rem;
-  margin-top: 0.2rem;
-  border: 1px solid #a5a5a5;
-  border-radius: 4px;
-}
-.form-contact .form-contact__form > form input#checkbox:checked {
-  position: relative;
-}
-.form-contact .form-contact__form > form input#checkbox:checked::after {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  content: url("../assets/Checkmark.svg");
-}
-
 footer {
   margin-top: 5rem;
   background-color: #f7f7f7;

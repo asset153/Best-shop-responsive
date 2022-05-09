@@ -1,7 +1,9 @@
 section.calculator {
-  min-height: 500px;
+  //min-height: 500px;
   background-color: $color-light-grey;
+
   > .calculator__container {
+    padding: 5rem 0 10rem 0;
     @include tablet() {
       @include display-flex();
       flex-wrap: wrap;
@@ -14,29 +16,60 @@ section.calculator {
       @include choose-your-font($font-raleway, 400, 3.6rem, $color-black);
       text-align: center;
       width: 100%;
+      margin-bottom: 5rem;
     }
 
     > form {
       @include choose-your-font($font-open-sans, 400, 1.3rem, $color-grey);
       @include display-flex(column, normal, normal);
       @include tablet() {
-        width: 50%;
+        width: calc(50% - 2.5rem);
+        margin-right: 2.5rem;
       }
 
       > input, select {
         @include choose-your-font($font-open-sans, 400, 1.3rem, $color-grey);
         @extend %normalize-input;
+        @include tablet() {
+          margin: 1rem 0;
+        }
+        margin: 1rem;
       }
+
+      > .calculator__container__checkbox {
+        @include display-flex(row, normal, center);
+
+        > label {
+          font-size: 1.2rem;
+        }
+
+        > input[type="checkbox"] {
+          margin: 1rem;
+          @extend %normalize-checkbox;
+          @include tablet() {
+            margin: 1rem 1rem 1rem 0;
+          }
+        }
+      }
+
+
     }
 
     > .calculator__container__pricing {
       @include tablet() {
-        width: 50%;
+        width: calc(50% - 2.5rem);
+        margin-left: 2.5rem;
       }
 
       > .calculator__container__pricing__item {
         @include display-flex(row, space-between, center);
         @include choose-your-font($font-open-sans, 400, 1.4rem, $color-white);
+        @include tablet() {
+          margin: 1rem 0;
+        }
+        padding: 0.5rem 2rem;
+        margin: 1rem;
+        border-radius: 0.6rem;
         background-color: $color-green;
 
         > span:nth-child(3) {
@@ -50,6 +83,7 @@ section.calculator {
           &:before {
             content: "$";
           }
+
           &:after {
             content: " * $0.5";
           }
@@ -61,6 +95,7 @@ section.calculator {
           &:before {
             content: "$";
           }
+
           &:after {
             content: " * $0.25";
           }
@@ -70,15 +105,23 @@ section.calculator {
       > .calculator__container__pricing__item-totalSum {
         width: 178px;
         height: 38px;
-        margin-left: auto;
+
         @include choose-your-font($font-open-sans, 400, 1.4rem, $color-white);
         @include display-flex(row, space-between, center);
+        @include tablet() {
+          margin-left: auto;
+          margin-right: 0;
+        }
+        margin-left: auto;
+        margin-right: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 0.6rem;
         background-color: $primary-color;
 
-          > span:nth-child(2) {
-            text-align: end;
-            font-size: 2rem;
-          }
+        > span:nth-child(2) {
+          text-align: end;
+          font-size: 2rem;
+        }
       }
 
       > .d-none {

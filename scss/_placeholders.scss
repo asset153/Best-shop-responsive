@@ -15,3 +15,26 @@
   border: 1px solid $primary-color;
   padding: 1rem;
 }
+
+%normalize-checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid $color-grey;
+  border-radius: 4px;
+  background-color: $color-white;
+
+  &:checked {
+    position: relative;
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      content: url("../assets/Checkmark.svg");
+    }
+  }
+}
